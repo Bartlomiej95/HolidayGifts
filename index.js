@@ -5,6 +5,7 @@ const {handleError} = require("./utils/errors");
 const {homeRouter} = require("./routers/home");
 const {childRouter} = require("./routers/child");
 const {giftRouter} = require("./routers/gift");
+require('./utils/db');
 
 const app = express();
 

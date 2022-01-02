@@ -1,10 +1,14 @@
 const  {Router} = require('express');
+const {GiftRecord} = require("../records/gift.record");
 
 const giftRouter = Router();
 
 giftRouter
     .get('/', (req, res) => {
-        res.render('gift/list');
+        const giftLists = GiftRecord.listAll();
+        res.render('gift/list', {
+            giftLists,
+        });
     })
 
 module.exports = {

@@ -2,23 +2,26 @@
 <ul>
     {{#each childList}}
         <li>
-            <label>
-                {{this.name}}
-                <select>
-                    <option value="">Brak</option>
-                    {{#each ../giftList}}
-                        <option value="{{this.name}}">{{this.name}}</option>
-                    {{/each}}
-                </select>
-            </label>
-            <button>Zapisz</button>
+            <form action="/child/gift/{{this.id}}?_method=PATCH" method="post">
+                <label>
+                    {{this.name}}
+                    <select name="giftId">
+                        <option value="">Brak</option>
+                        {{#each ../giftList}}
+                            <option value="{{this.id}}" {{#if (equals this.id ../giftId)}}selected="selected" {{/if}} >{{this.name}}</option>
+                        {{/each}}
+                    </select>
+                </label>
+                <button>Save</button>
+            </form>
         </li>
     {{/each}}
 </ul>
 <h2>Add new child to list</h2>
-<form action="">
+<form action="/child" method="post">
     <label>
         Imię
         <input name="name" type="text">
     </label>
+    <button>Add new child</button>
 </form>

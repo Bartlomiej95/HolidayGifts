@@ -1,0 +1,46 @@
+.main--wrapper {
+    margin: 0 auto;
+}
+
+.main--subtitle {
+    margin-bottom: 30px;
+}
+
+.sectionOne__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.sectionOne__li {
+    display: block;
+    margin: 5px 0;
+}
+
+.sectionOne__form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.sectionOne__label {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.sectionTwo__form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionTwo__form label {
+    margin: 10px 0;
+}

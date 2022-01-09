@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: palevioletred;
+    color: floralwhite;
+}
+
+h1, h2 {
+    font-family: 'Shizuru', cursive;
+    text-align: center;
+    font-weight: 200;
+}
+
+ul {
+    list-style: none;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 80vw;
+}
+

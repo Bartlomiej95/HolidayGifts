@@ -1,0 +1,13 @@
+.mainBtn {
+    width: 80px;
+    height: 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #5a07a0;
+    cursor: pointer;
+    color: white;
+}
+
+.mainBtn:hover {
+    background-color: blueviolet;
+}

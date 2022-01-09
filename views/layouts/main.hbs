@@ -5,14 +5,50 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+            src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+            data-auto-a11y="true"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/css.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/button.css">
     <title>Holiday Gifts</title>
 </head>
 <body>
-<h1>List of gifts for Santa Claus</h1>
-<ul>
-    <li><a href="/gift">Gifts</a></li>
-    <li><a href="/child">Children</a></li>
-</ul>
-{{{body}}}
+<div class="wrapper">
+    <header class="header">
+        <div class="header__titleDiv">
+            <h1>List of gifts for Santa </h1>
+        </div>
+        <div class="header__menu">
+            <ul class="header__ul">
+                <li class="header__li">
+                    <a href="/gift">
+                        <div class="header__li--iconWrapper">
+                            <i class="fas fa-gifts header__menu--icon"></i>
+                            <h3>Prezenty</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="header__li">
+                    <a href="/child">
+                        <div class="header__li--iconWrapper">
+                            <i class="fas fa-child header__menu--icon"></i>
+                            <h3> Dzieci </h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    {{{body}}}
+</div>
 </body>
 </html>

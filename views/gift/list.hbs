@@ -1,20 +1,22 @@
-<h2>List of gifts</h2>
-<ul>
-    {{#each giftLists}}
-        <li>
-            {{this.name}} {{this.count}} szt.
-        </li>
-    {{/each}}
-</ul>
-<h2>Add new gift to list</h2>
-<form action="/gift" method="post">
-    <label>
-        Name
-        <input name="name" type="text">
-    </label>
-    <label>
-        Count
-        <input name="count" type="number">
-    </label>
-    <button>Add to list</button>
-</form>
+<main class="main--wrapper">
+    <h2 class="main--subtitle">List of gifts</h2>
+    <ul>
+        {{#each giftLists}}
+            <li>
+                {{this.name}} {{this.count}} szt.
+            </li>
+        {{/each}}
+    </ul>
+    <h2 class="main--subtitle">Add new gift to list</h2>
+    <form action="/gift" method="post" class="sectionTwo__form">
+        <label>
+            Name
+            <input name="name" type="text">
+        </label>
+        <label>
+            Count
+            <input name="count" type="number">
+        </label>
+        <button class="mainBtn">Add to list</button>
+    </form>
+</main>

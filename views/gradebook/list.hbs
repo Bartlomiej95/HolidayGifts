@@ -1,0 +1,23 @@
+<main class="main--wrapper">
+    <h2>Grade Book for Santa</h2>
+    <div class="gradebook--table--wrapper">
+        <table class="gradebook--table">
+            {{#each marksList}}
+                <tr class="gradebook--table__tr">
+                    <td class="gradebook--table__td">
+                        <p>{{this.symbol}}</p>
+                    </td>
+                    <td class="gradebook--table__td">
+                        {{#each ../childList}}
+                            {{#if (equals this.markId ../id )}} <p>{{this.name}}</p>{{/if}}
+                        {{/each}}
+
+                    </td>
+                    <td class="gradebook--table__td">
+                        <p>{{this.content}}</p>
+                    </td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+</main>

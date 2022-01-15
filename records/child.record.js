@@ -13,6 +13,7 @@ class ChildRecord {
         this.id = obj.id;
         this.name = obj.name;
         this.giftId = obj.giftId;
+        this.markId = obj.markId;
     }
 
     static async listAll() {

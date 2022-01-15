@@ -48,6 +48,7 @@ class GiftRecord {
         const [[{count}]] = await pool.execute("SELECT COUNT(*) AS `count` FROM `children` WHERE `giftId` = :id ", {
             id: this.id
         });
+        console.log("count", count);
 
         return count;
     }

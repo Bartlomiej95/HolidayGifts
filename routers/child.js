@@ -2,7 +2,7 @@ const {ValidationError} = require("../utils/errors");
 const  {Router} = require('express');
 const {ChildRecord} = require("../records/child.record");
 const {GiftRecord} = require("../records/gift.record");
-
+const {GradebookRecord} = require("../records/gradebook.record");
 const childRouter = Router();
 
 childRouter
@@ -26,7 +26,6 @@ childRouter
 
     .patch('/gift/:childId', async (req, res) => {
         const child = await ChildRecord.getOne(req.params.childId);
-        console.log(child);
 
         if(child === null) {
             throw new ValidationError('Not found child with given ID')
@@ -44,7 +43,17 @@ childRouter
         child.giftId = gift === null ? null : gift.id;
         await child.update();
         res.redirect('/child');
-    });
+    })
+
+    .get('/gradebook', async (req, res) => {
+        const gradebook = await GradebookRecord.listAll();
+        const childList = await ChildRecord.listAll();
+
+        res.render('gradebook/list', {
+            marksList: gradebook,
+            childList,
+        });
+    })
 
 module.exports = {
     childRouter,

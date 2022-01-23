@@ -2,7 +2,7 @@ const express = require("express");
 require('express-async-errors');
 const methodOverride = require('method-override');
 const {engine} = require('express-handlebars');
-const {handleError} = require("./utils/errors");
+const {handleError, pageNotFound} = require("./utils/errors");
 const {homeRouter} = require("./routers/home");
 const {childRouter} = require("./routers/child");
 const {giftRouter} = require("./routers/gift");
@@ -28,6 +28,7 @@ app.use('/child', childRouter);
 app.use('/gift', giftRouter);
 
 app.use(handleError);
+app.use(pageNotFound)
 
 app.listen(3000, '0.0.0.0', () => {
     console.log('Listening on http://localhost:3000');

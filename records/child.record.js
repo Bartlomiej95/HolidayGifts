@@ -7,7 +7,7 @@ class ChildRecord {
     constructor(obj) {
 
         if(!obj.name || obj.name < 2 || obj.name > 26) {
-            throw new ValidationError('Name should have more than 2 characters and less than 26')
+            throw new ValidationError('Name should have more than 2 characters and less than 26');
         }
 
         this.id = obj.id;

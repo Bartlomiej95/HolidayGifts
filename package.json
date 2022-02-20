@@ -5,8 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon index.ts",
-    "start-ts": "ts-node index.ts",
+    "start": "ts-node index.ts",
     "start:dev": "tsnd index.ts"
   },
   "keywords": [],

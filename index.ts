@@ -8,6 +8,7 @@ import {childRouter} from "./routers/child";
 import {giftRouter} from "./routers/gift";
 import {handlebarsHelpers} from "./utils/handlebars-helpers";
 import "./utils/db";
+import path from "path";
 
 const app = express();
 
@@ -15,13 +16,14 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({
     extended: true,
 }));
-app.use(express.static('public'));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.engine('.hbs', engine({
     extname: '.hbs',
     helpers: handlebarsHelpers,
 }));
 app.set('view engine', '.hbs');
+
 
 app.use('/', homeRouter);
 app.use('/child', childRouter);

@@ -12,6 +12,7 @@
     "types": ["node"],
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "outDir": "dist",
+    "jsxImportSource": "preact",
+    "isolatedModules": true,
   }
 }

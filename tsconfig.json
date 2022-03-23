@@ -12,7 +12,6 @@
     "types": ["node"],
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "jsxImportSource": "preact",
     "isolatedModules": true,
   }
 }
